@@ -37,12 +37,13 @@
                 <div class="input_inline">
                     <label for="inputBookIsComplete">Selesai dibaca</label>
                     <input id="inputBookIsComplete" type="checkbox">
+                    <input type="hidden" id="book_id">
                 </div>
                 <button id="bookSubmit" type="submit">Masukkan Buku ke rak <strong>Belum selesai dibaca</strong></button>
             </form>
         </section>
         <section class="search_section">
-            <h2>Cari Buku (Opsional)</h2>
+            <h2>Cari Buku</h2>
             <form id="searchBook">
                 <label for="searchBookTitle">Judul</label>
                 <input id="searchBookTitle" type="text">
@@ -54,18 +55,6 @@
             <h2>Belum selesai dibaca</h2>
 
             <div id="incompleteBookshelfList" class="book_list">
-                <!-- <article class="book_item">
-                    <div class="book_detail">
-                        <h3>Book Title</h3>
-                        <p>Penulis: John Doe</p>
-                        <p>Tahun: 2002</p>
-                    </div>
-
-                    <div class="action">
-                        <i class="gg-check-o"></i>
-                        <i class="gg-close-o"></i>
-                    </div>
-                </article> -->
             </div>
         </section>
 
@@ -73,18 +62,7 @@
             <h2>Selesai dibaca</h2>
 
             <div id="completeBookshelfList" class="book_list">
-                <!-- <article class="book_item">
-                    <div class="book_detail">
-                        <h3>Book Title</h3>
-                        <p>Penulis: John Doe</p>
-                        <p>Tahun: 2002</p>
-                    </div>
-
-                    <div class="action">
-                        <i class="gg-undo"></i>
-                        <i class="gg-close-o"></i>
-                    </div>
-                </article> -->
+            </div>
         </section>
     </main>
     <script src="./js/main.js"></script>
