@@ -28,22 +28,22 @@ function addBook() {
     const inputBookTitle = document.getElementById('inputBookTitle').value;
     const inputBookAuthor = document.getElementById('inputBookAuthor').value;
     const inputBookYear = document.getElementById('inputBookYear').value;
+    const inputBookYearToNumber = parseInt(inputBookYear);
     let isComplete = document.getElementById('inputBookIsComplete').checked;
     const bookID = document.getElementById('book_id').value;
     if (bookID != '') {
         let index = findBookIndex(bookID);
         bookshelf[index].title = inputBookTitle;
         bookshelf[index].author = inputBookAuthor;
-        bookshelf[index].year = inputBookYear;
+        bookshelf[index].year = inputBookYearToNumber;
         bookshelf[index].isCompleted = isComplete;
     } else {
-        let bookObject = generateBookObject(generatedID, inputBookTitle, inputBookAuthor, inputBookYear, isComplete);
+        let bookObject = generateBookObject(generatedID, inputBookTitle, inputBookAuthor, inputBookYearToNumber, isComplete);
         bookshelf.push(bookObject);
         alert('Buku berhasil ditambah.');
-        saveData();
     }
+    saveData();
     document.dispatchEvent(new Event(RENDER_EVENT));
-
     emptyInputs(['inputBookTitle', 'inputBookAuthor', 'inputBookYear', 'book_id']);
 }
 
